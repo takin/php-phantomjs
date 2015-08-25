@@ -1,0 +1,86 @@
+<head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}</style>
+		<title class="ng-binding"></title>
+		<meta charset="UTF-8">
+		<meta name="fragment" content="!">
+		<base href="http://localhost/demoapp/">
+		<!-- build:css css/style.css -->
+		<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="bower_components/animate-css/animate.css">
+		<link rel="stylesheet" type="text/css" href="public/css/style.css">
+		<link rel="stylesheet" type="text/css" href="directives/loader/loader.css">
+		<!-- endbuild -->
+	</head>
+	<body data-status="ready">
+		<div class="container-fluid my-container">
+			<div class="row">
+				<div class="pull-right loader-container">
+					<!-- ngIf: isLoading -->
+				</div>
+				<my-navigation class="ng-isolate-scope"><nav class="nav navbar-inverse">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<a class="navbar-brand" href=".">AngularJS Demo App</a>
+		</div>
+		<ul class="nav navbar-nav">
+			<!-- ngRepeat: menu in menus --><li ng-repeat="menu in menus" class="ng-scope"><a href="products" class="ng-binding">Products</a></li><!-- end ngRepeat: menu in menus --><li ng-repeat="menu in menus" class="ng-scope"><a href="customers" class="ng-binding">Customers</a></li><!-- end ngRepeat: menu in menus --><li ng-repeat="menu in menus" class="ng-scope"><a href="flickr" class="ng-binding">Flickr Service</a></li><!-- end ngRepeat: menu in menus -->
+		</ul>
+	</div>
+</nav></my-navigation>
+			</div>
+			<div class="content-container">
+				<div class="row">
+					<!-- ngView: undefined --><ng-view class="animation ng-scope ng-animate ng-enter ng-enter-active"><table class="table ng-scope">
+	<tbody><tr>
+		<td>Nama</td>
+		<td>Alamat</td>
+	</tr>
+	<!-- ngRepeat: customer in customers --><tr calss="anime-list-up" ng-repeat="customer in customers" class="ng-scope">
+		<td class="ng-binding">Syamsul Muttaqin</td>
+		<td class="ng-binding">Yogyakarta</td>
+	</tr><!-- end ngRepeat: customer in customers --><tr calss="anime-list-up" ng-repeat="customer in customers" class="ng-scope">
+		<td class="ng-binding">Albert Einstein</td>
+		<td class="ng-binding">Klaten</td>
+	</tr><!-- end ngRepeat: customer in customers --><tr calss="anime-list-up" ng-repeat="customer in customers" class="ng-scope">
+		<td class="ng-binding">Mamah Dedeh</td>
+		<td class="ng-binding">Jakarta</td>
+	</tr><!-- end ngRepeat: customer in customers --><tr calss="anime-list-up" ng-repeat="customer in customers" class="ng-scope">
+		<td class="ng-binding">Sarimin</td>
+		<td class="ng-binding">Gunung Kidul</td>
+	</tr><!-- end ngRepeat: customer in customers -->
+</tbody></table></ng-view>
+				</div>
+			</div>
+		</div>
+		
+		<!-- build:js js/vendor.js -->
+		<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+		<script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
+		<script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
+		<script type="text/javascript" src="bower_components/angular-animate/angular-animate.js"></script>
+
+		<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+		<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+		<!-- endbuild -->
+	
+		<!-- build:js js/app.js -->
+		<script type="text/javascript" src="app.js"></script>
+	
+		<script type="text/javascript" src="services/product.service.js"></script>
+		<script type="text/javascript" src="services/customer.service.js"></script>
+		<script type="text/javascript" src="services/flickr.service.js"></script>
+	
+		<script type="text/javascript" src="components/home/home.js"></script>
+		<script type="text/javascript" src="components/flickr/flickr.js"></script>
+		<script type="text/javascript" src="components/customers/customers.js"></script>
+		<script type="text/javascript" src="components/products/product.js"></script>
+		<script type="text/javascript" src="components/product_detail/product_detail.js"></script>
+		
+		<script type="text/javascript" src="directives/navigation/navigation.directive.js"></script>
+		<script type="text/javascript" src="directives/form/form.directive.js"></script>
+		<script type="text/javascript" src="directives/loader/loader.directive.js"></script>
+		<script type="text/javascript" src="directives/flicker_thumb/flicker_thumbnail.directive.js"></script>
+		<script type="text/javascript" src="directives/product_display/product_display.js"></script>
+		<!-- endbuild -->
+	
+
+</body>

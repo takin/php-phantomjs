@@ -1,0 +1,22 @@
+var page       = require('webpage').create();
+var response = {};
+
+var callback = function(status){
+  if(status == 'success'){
+    var observable = setInterval(function(){
+        response.content = page.evaluate(function(){
+          var body = document.getElementsByTagName('body')[0];
+          if(body.getAttribute('data-status') == 'ready'){
+            return document.getElementsByTagName('html')[0].innerHTML;
+          }
+        });
+        if(response.content){
+          clearInterval(observable);
+          console.log(JSON.stringify(response));
+          phantom.exit();
+        }
+      },100);
+  }
+}
+
+page.open('{{ request.getUrl() }}', callback);
