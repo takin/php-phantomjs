@@ -1,6 +1,5 @@
 var page       = require('webpage').create();
 var response = {};
-
 var callback = function(status){
   if(status == 'success'){
     var observable = setInterval(function(){

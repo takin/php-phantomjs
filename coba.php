@@ -14,8 +14,8 @@ $req = $client->getMessageFactory()->createRequest();
 $res = $client->getMessageFactory()->createResponse();
 
 $req->setType('procedure');
-$fragment = 'customers';
-$req->setUrl('http://localhost/demoapp/#/'.$fragment);
+$fragment = 'products';
+$req->setUrl('http://angular.demo/'.$fragment);
 
 $client->send($req, $res);
 
